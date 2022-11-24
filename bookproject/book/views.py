@@ -3,7 +3,7 @@ from django.views.generic import ListView,DetailView
 from.models import Book
 
 class ListBookView(ListView):
-    template_name='book/book_list.html'
+    template_name='book/Diary.html'
     model=Book 
 
 class DetailBookView(DetailView):
