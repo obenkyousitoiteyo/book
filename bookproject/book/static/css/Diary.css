@@ -132,3 +132,9 @@ h2 {
 .Search{
   text-align: right;
 }
+
+.card{
+  margin-left: 306px;
+  border : 1px solid;
+  background-color: beige;
+}
