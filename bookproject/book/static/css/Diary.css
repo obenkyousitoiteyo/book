@@ -142,3 +142,18 @@ h2 {
 .card-header{
   font-size: 30px;
 }
+
+.toukougamen{
+  margin-left: 306px;
+}
+
+/* .deleteBtn{
+  margin-left: 700px;
+} */
+
+
+.henkoubutton{
+  display: flex;
+  justify-content: flex-end;
+}
+

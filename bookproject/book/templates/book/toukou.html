@@ -10,7 +10,7 @@
   <body>
     <div class="app">
       <div class="main">
-        <!-- <div class="sidebar">
+        <div class="sidebar">
             <h1 id="logo"><a href="index.html">
                 <img src="../images/aiabana-.jpg" width="250" height="150" alt="トップ"></a></h1>
             <li><a href="../Mypage/Mypage.html">マイページへ</a></li>
@@ -18,7 +18,7 @@
             <li><a href="../Good/Good.html">いいね</a></li>
             <li><a href="../Diary/Diary.html" class="current">日記</a></li>
             <li><a href="../Chat/Chat.html">チャット</a></li>
-        </div> -->
+        </div>
         <div class="content">
           <div class="titlebar">
             <h2>日記</h2>
@@ -31,12 +31,13 @@
           <body>
             <div>
               {% block content %}
-              <form method="post" class="p-4 m-4 bg-light border border-success rounded form-group">{% csrf_token %}
+              <form method="post" class="toukougamen">{% csrf_token %}
                 {{form.as_p}}
                     <button class="btn btn-success mt-4" type="submit">投稿する</button>
+                    <a href="http://127.0.0.1:8000/book/"><input type="button" value="戻る" name="modottenaiyoruwosiranai"></a>
+
             </form>
             {% endblock content %}
-                <a href="http://127.0.0.1:8000/book/"><input type="button" value="戻る" name="modottenaiyoruwosiranai"></a>
                 </div>
           </body>
         </form>

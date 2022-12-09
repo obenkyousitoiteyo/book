@@ -30,18 +30,27 @@
           </div>
           <body>
             {% for item in object_list %}
+            {% block content %}
             <div class="card" style="margin: left 100px;" >
+              <div class="group">
               <h5 class="card-header">{{item.title}}</h5>
+              </div>
               <div class="card-body">
-                <p class="card-text">{{item.text}}</p>
+                <a class="card-text">{{item.text}}</a>
+                  <div class="henkoubutton">
+                    <a href="{% url 'delete' item.pk %}"  class="deleteBtn">削除</a>
+                    <a href="{% url 'update' item.pk %}" class="updateBtn">　編集</a>
+                  </div>
                 <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
               </div>
             </div>
+            {% endblock %}
             {% endfor %}
           </body>
           <div class="toukou">
             <form action="日記投稿画面のURL" method="post">
             <a href="{% url 'create' %}" class="createBtn">投稿</a>
+              
         </form>
         </div>
        
